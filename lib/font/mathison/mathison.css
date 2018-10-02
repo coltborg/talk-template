@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Mathison';
+  src: url('mathison-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mathison';
+  src: url('mathison-bolditalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mathison';
+  src: url('mathison-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mathison';
+  src: url('mathison-regularitalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}

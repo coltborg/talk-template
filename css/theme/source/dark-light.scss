@@ -1,0 +1,93 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Colt Borg, https://coltborg.com
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+// @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(../../lib/font/dank-mono/dank-mono.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+
+// Link to contrast table
+// http://contrast-grid.eightshapes.com/?background-colors=&foreground-colors=%23ffffff%2C%20White%0D%0A%23f5f5f5%2C%20White%20Smoke%0D%0A%23e6e6e6%2C%20Seashell%0D%0A%23DDDDDD%2C%20Gainsboro%0D%0A%23cacac8%2C%20Alto%0D%0A%23888888%2C%20Stack%0D%0A%23404040%2C%20Charcoal%0D%0A%2314140a%2C%20Green%20Waterloo%0D%0A%233131fc%2C%20Palatinate%20Blue%0D%0A%23dcddf4%2C%20Quartz%0D%0A%23fd26fd%2C%20Fuchsia%0D%0A%23f6c7f6%2C%20Brilliant%20Lavender%0D%0A%23fdfd26%2C%20Lazer%20Lemon%0D%0A%2326fd26%2C%20Electric%20Lime%0D%0A%0D%0A&es-color-form__tile-size=compact
+:root {
+	--white: #ffffff;
+	--white-smoke: #f5f5f5;
+	--seashell: #e6e6e6;
+	--gainsboro: #DDDDDD;
+	--alto: #cacac8;
+	--stack: #888888;
+	--charcoal: #404040;
+	--green-waterloo: #14140a;
+	--palatinate-blue: #3131fc;
+	--quartz: #dcddf4;
+	--fuchsia: #fc25fc;
+	--brilliant-lavender: #f5c5f5;
+	--lazer-lemon: #fdfd26;
+	--electric-lime: #25fc25;
+	--madang: #c5f5c5;
+}
+
+.dark {
+	--background-color: var(--green-waterloo);
+	--text-color: var(--seashell);
+	--header-color: var(--white-smoke);
+	--link-color: var(--electric-lime);
+	--link-hover-color: var(--madang);
+	--selection-background-color: var(--palatinate-blue);
+}
+
+.light {
+	--background-color: var(--white-smoke);
+	--text-color: var(--charcoal);
+	--header-color: var(--green-waterloo);
+	--link-color: var(--palatinate-blue);
+	--link-hover-color: var(--quartz);
+	--selection-background-color: var(--palatinate-blue);
+}
+
+// Override theme settings (see ../template/settings.scss)
+// Colors
+$backgroundColor: var(--background-color);
+$mainColor: var(--text-color);
+$headingColor: var(--header-color);
+$linkColor: var(--link-color);
+$linkColorHover: var(--link-hover-color);
+$selectionBackgroundColor: var(--selection-background-color);
+
+$mainFontSize: 42px;
+$mainFont: 'dm', sans-serif;
+$headingFont: 'Roboto Slab', serif;
+$headingTextShadow: none;
+$headingLetterSpacing: 1.1;
+$headingTextTransform: uppercase;
+$headingFontWeight: 700;
+
+$heading1Size: 1.9em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: var(--green-waterloo);
+	}
+}
+
+* {
+	transition:
+		color 150ms linear,
+		background-color 150ms linear;
+}
+
+// Theme template ------------------------------
+@import "../template/colt-theme";
+// ---------------------------------------------
